@@ -1,0 +1,62 @@
+[
+    {
+        "id": "d8e65339-8450-4452-ac4d-05517bb597a1",
+        "title": "Awakening",
+        "description": "A new dawn breaks in the realm.",
+        "bookID": "b9ef39fb-4d58-4c1c-8c36-16a7e1121a61"
+    },
+    {
+        "id": "912eff06-68a0-4e6b-891a-d30555be96789",
+        "title": "Confrontation",
+        "description": "The clash of fates and choices.",
+        "bookID": "b9ef39fb-4d58-4c1c-8c36-16a7e1121a61"
+    },
+    {
+        "id": "fbdc3213-1a30-4b54-b98b-913e54f98257",
+        "title": "The Battle Begins",
+        "description": "The first skirmish unfolds.",
+        "bookID": "b9ef39fb-4d58-4c1c-8c36-16a7e1121a61"
+    },
+    {
+        "id": "b6578709-6f1a-4cc9-9ead-a1ef5d4f38e9",
+        "title": "The Turning Point",
+        "description": "A critical moment alters the fight.",
+        "bookID": "b9ef39fb-4d58-4c1c-8c36-16a7e1121a61"
+    },
+    {
+        "id": "c4921a18-7793-4d1a-a3c2-84adbfe0bddd",
+        "title": "The Final Stand",
+        "description": "Every hero fights for survival.",
+        "bookID": "b9ef39fb-4d58-4c1c-8c36-16a7e1121a61"
+    },
+    {
+        "id": "32e2af59-1594-4753-a0d1-a6d3eebed46b",
+        "title": "Resolution",
+        "description": "The aftermath of the battles.",
+        "bookID": "f9f5aad0-526c-4dcd-94e1-1828fedd72b9"
+    },
+    {
+        "id": "6c5da0f0-8168-4919-b1a1-61c98f964f0d",
+        "title": "The Final Echo",
+        "description": "The last voice in a nameless world.",
+        "bookID": "4e5a3824-bb58-4978-9bc5-1ef298fa54c9"
+    },
+    {
+        "id": "a1b34f93-4b8a-4f3f-bf85-c137c5466c14",
+        "title": "Galactic Awakening",
+        "description": "Discovery of new worlds.",
+        "bookID": "d3f783bc-9f42-4aab-85f4-960442356ace"
+    },
+    {
+        "id": "c3fe6e69-30d8-4e50-9143-1bd938745f31",
+        "title": "The Cosmic Rift",
+        "description": "A tear in reality reveals secrets.",
+        "bookID": "d3f783bc-9f42-4aab-85f4-960442356ace"
+    },
+    {
+        "id": "34c4c56b-cc30-4bd1-bc56-03b8607a1e77",
+        "title": "Echoes of the Past",
+        "description": "Uncovering ancient truths in space.",
+        "bookID": "d3f783bc-9f42-4aab-85f4-960442356ace"
+    }
+]

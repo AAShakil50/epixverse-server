@@ -1,0 +1,69 @@
+type Project {
+  id: ID!
+  title: String!
+  description: String
+  books(limit: Int = 10, offset: Int = 0): [Book!]
+  elementals(limit: Int = 10, offset: Int = 0): [Elemental!]
+}
+
+type Book {
+  id: ID!
+  title: String!
+  description: String
+  chapters(limit: Int = 10, offset: Int = 0): [Chapter!]
+}
+
+type Chapter {
+  id: ID!
+  title: String!
+  scenes(limit: Int = 2, offset: Int = 0): [Scene!]
+}
+
+type Scene {
+  id: ID!
+  title: String
+  index: Int!
+  description: String
+}
+
+type Elemental {
+  id: ID!
+  title: String!
+  description: String
+  elemental: Elemental
+}
+
+type EpixVerse {
+  app: String!
+  version: String!
+  description: String!
+  developer: [String!]
+}
+
+type Query {
+  projects(limit: Int = 10, offset: Int = 0): [Project!]!
+  project(id: ID!): Project
+
+  books(limit: Int = 10, offset: Int = 0): [Book!]!
+  book(id: ID!): Book
+
+  chapters(limit: Int = 10, offset: Int = 0): [Chapter!]!
+  chapter(id: ID!): Chapter
+
+  scenes(limit: Int = 2, offset: Int = 0): [Scene!]!
+  scene(id: ID!): Scene
+
+  elementals(
+    limit: Int = 10
+    offset: Int = 0
+    projectID: ID = null
+  ): [Elemental!]!
+  elemental(id: ID!): Elemental
+
+  epixverse: EpixVerse!
+}
+
+type Mutation {
+  addProject(title: String!, description: String): Project!
+  editProject(id: ID!, title: String, description: String): Project!
+}
