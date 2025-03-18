@@ -1,9 +1,9 @@
-import Projects from '../store/projects.json';
-import Books from '../store/books.json';
-import Chapters from '../store/chapters.json';
-import Scenes from '../store/scenes.json';
-import Elementals from '../store/elementals.json';
-import { Resolvers } from '../generated/resolvers-types';
+import Projects from "../store/projects.json";
+import Books from "../store/books.json";
+import Chapters from "../store/chapters.json";
+import Scenes from "../store/scenes.json";
+import Elementals from "../store/elementals.json";
+import { Resolvers } from "../generated/resolvers-types";
 
 const resolvers: Resolvers = {
   Query: {
@@ -13,7 +13,7 @@ const resolvers: Resolvers = {
     },
 
     project: async (_project, _args) => {
-      return Projects.find((project) => project.id === _args.id) ?? null
+      return Projects.find((project) => project.id === _args.id) ?? null;
     },
 
     books: async (_parent, _args) => {
@@ -46,8 +46,11 @@ const resolvers: Resolvers = {
     elementals: async (_parent, _args) => {
       const { limit, offset, projectID } = _args;
       let elementals = Elementals.slice(offset, offset + limit);
-      if (projectID) elementals = elementals.filter((elemental) => elemental.projectID === projectID);
-      return (elementals);
+      if (projectID)
+        elementals = elementals.filter(
+          (elemental) => elemental.projectID === projectID
+        );
+      return elementals;
     },
 
     elemental: async (_parent, _args) => {
@@ -56,10 +59,10 @@ const resolvers: Resolvers = {
 
     epixverse: async () => {
       return {
-        app: 'EpixVerse',
+        app: "EpixVerse",
         version: Math.random().toString(36).substring(7),
-        description: 'EpixVerse is a GraphQL API for a fictional writing app.',
-        developer: ['Ashraful Alam Shakil', 'Nirob Ahmed'],
+        description: "EpixVerse is a GraphQL API for a fictional writing app.",
+        developer: ["Ashraful Alam Shakil", "Nirob Ahmed"],
       };
     },
   },
@@ -72,14 +75,18 @@ const resolvers: Resolvers = {
 
     elementals: async (_parent, _args) => {
       const { limit, offset } = _args;
-      let elementals = Elementals.filter((elemental) => elemental.projectID === _parent.id);
-      return (elementals.slice(offset, offset + limit));
+      let elementals = Elementals.filter(
+        (elemental) => elemental.projectID === _parent.id
+      );
+      return elementals.slice(offset, offset + limit);
     },
   },
   Book: {
     chapters: async (_parent, _args) => {
       const { limit, offset } = _args;
-      const chapters = Chapters.filter((chapter) => chapter.bookID === _parent.id)
+      const chapters = Chapters.filter(
+        (chapter) => chapter.bookID === _parent.id
+      );
       return chapters.slice(offset, offset + limit);
     },
   },
@@ -93,18 +100,18 @@ const resolvers: Resolvers = {
 
   Mutation: {
     addProject: async (_parent, _args) => {
-      const { title, description } = _args
-      
+      const { title, description } = _args;
+
       const newProject = {
         id: String(Projects.length),
         title,
-        description: description ?? ''       
-      }
+        description: description ?? "",
+      };
 
-      Projects.push(newProject)
-      return newProject
-    }
-  }
+      Projects.push(newProject);
+      return newProject;
+    },
+  },
 };
 
 export default resolvers;
